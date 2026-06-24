@@ -1,79 +1,100 @@
-# Cs50W: Engineering & Computer Science Reference
+# Academic Foundations: Harvard CS50 Web Architecture
 
+[![Language: Web](https://img.shields.io/badge/Language-HTML5_/_CSS3-E34F26?logo=html5&style=flat-square)]()
+[![Institution](https://img.shields.io/badge/Curriculum-Harvard_University-A51C30?logo=harvard&style=flat-square)]()
 [![Maintenance: Archived/Educational](https://img.shields.io/badge/Maintenance-Educational-blue.svg?style=flat-square)]()
-[![Code Quality: Staff-Level](https://img.shields.io/badge/Code_Quality-Standardized-3ECF8E?style=flat-square)]()
 
 ## Overview
-This repository serves as a localized reference library for fundamental computer science algorithms, data structures, and automation utilities. It has been strictly audited and standardized to maintain high-quality engineering conventions.
+This repository serves as a meticulously organized, localized reference library for foundational frontend Web Development architectures, directly derived from the Harvard University CS50W curriculum. It contains deeply documented implementations of semantic HTML, responsive CSS grids, CSS preprocessors (Sass), and frontend framework integrations (Bootstrap).
 
 ## Problem Statement
-Software engineers often lose track of fundamental algorithm implementations or foundational language syntaxes as they transition into specialized senior roles. This repository solves that by acting as a hardened, standardized, and easily searchable reference index for core computer science concepts and utility automation.
+As software engineers transition into highly abstracted frontend frameworks (e.g., React, Next.js, Tailwind), mastery over the core browser-native languages (vanilla HTML5 and CSS3) often degrades. When complex DOM rendering bugs or cross-browser flexbox layout issues arise, framework abstractions fail. This repository acts as an immutable reference index to solve that knowledge decay, providing immediate syntax and structural patterns for foundational Web mechanics.
 
 ## Key Features
-- **Algorithmic Correctness:** Core implementations of critical data structures and algorithms.
-- **Strict Standardization:** Enforces uniform directory structures and markdown formatting across all scripts.
-- **Reference Architecture:** Serves as a historical and educational baseline for future architectural designs.
+- **Semantic DOM Structuring:** Strict adherence to HTML5 web-accessibility (a11y) standards, avoiding generic `<div>` soup.
+- **Responsive Layout Architecture:** Native implementations of CSS Flexbox and Grid, mathematically scaling UI components across mobile, tablet, and desktop viewports.
+- **CSS Preprocessing:** Advanced styling logic utilizing Sass (Variables, Mixins, Nesting) to decouple and modularize global stylesheets.
+- **Framework Integration:** Baseline utilization of Twitter Bootstrap components to demonstrate rapid UI scaffolding.
 
 ## Architecture
 
 ```mermaid
 graph TD
-    Root[Repository Root] --> Logic[Core Implementation Files]
-    Root --> Tests[Automated Testing Suites]
-    Logic --> Execution[Runtime Environment]
-    Tests --> CI[Continuous Integration Baseline]
+    Root[CS50W Web Reference] --> Layout[DOM Structure]
+    Root --> Styles[Styling Engine]
+    Root --> Python[Backend Logic]
+    
+    Layout --> HTML[HTML5 Semantic Tags]
+    Styles --> CSS[CSS3 Flexbox / Grid]
+    Styles --> SASS[Sass Preprocessor]
+    Styles --> Bootstrap[Bootstrap Framework]
+    
+    HTML --> Browser[Browser DOM Engine]
+    CSS --> Browser
 ```
 
 ## Technology Stack
-- **Language:** Primary syntax (Python, Java, C, or JavaScript) dependent on module.
-- **Testing:** Native unit testing frameworks.
-- **Documentation:** GitHub Flavored Markdown (GFM).
+- **Structure:** HTML5
+- **Styling:** CSS3, Sass, Bootstrap
+- **Logic:** Python 3.11
+- **Testing:** `pytest` (HTML Parser)
+- **Documentation:** GitHub Flavored Markdown (GFM)
 
 ## Project Structure
 ```text
 cs50w/
-├── src/ / main/             # Core logic and algorithm definitions
-├── tests/                   # Baseline integrity tests
+├── _1.1_html/               # Semantic DOM references
+├── _1.2_css/                # Viewport responsive layouts
+├── _1.3_responsive_design/  # Media queries and mobile-first logic
+├── _1.4_bootstrap/          # Component integrations
+├── _1.5_saas/               # SCSS compilation architectures
+├── tests/                   # Automated Pytest HTML Linters
 └── README.md                # System documentation
 ```
 
 ## Installation
-Clone the repository to review the architectural patterns:
+No server backend is required. Clone the repository natively to your OS:
 ```bash
 git clone https://github.com/krsna016/cs50w.git
 cd cs50w
 ```
 
 ## Usage
-Navigate to the specific module or script and execute using the native compiler or interpreter.
+Navigate to the specific module and open the static `.html` payload directly in any modern browser (Chrome, Firefox, Safari).
 
 ## Examples
-*Executing a standard reference script:*
-```bash
-# Example for Python environments
-python3 main.py
+*Example of native CSS Grid deployment decoupling layout logic from the DOM:*
+```css
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
 ```
 
 ## Screenshots
 > [!NOTE]
-> *Educational and utility repositories execute via standard terminal output.*
+> *Educational and utility repositories execute via standard browser rendering.*
 
 ## Visual Demonstrations
 > [!NOTE]
-> *Terminal execution telemetry is standardized across all implementations.*
+> *Browser layout telemetry is standardized across all implementations.*
 
 ## Testing
-Baseline structural integrity tests are enforced to ensure that the repository logic can compile and execute without environment configuration errors.
+We utilize a custom Python `HTMLParser` within the `pytest` framework to recursively scan the entire repository. This mathematically proves that zero unclosed tags, void element violations, or structural DOM mismatches exist across the archive.
+```bash
+pytest tests/
+```
 
 ## Performance Notes
-- **Algorithmic Time Complexity:** Scripts and data structures within this repository are optimized for O(n) or O(log n) performance baselines where applicable.
+- **Render Blocking:** The scripts emphasize placing `<link rel="stylesheet">` tags in the `<head>` and executing external JavaScript before the `</body>` closure to prevent DOM-render blocking.
 
 ## Future Improvements
-- **Containerization:** Wrap reference scripts in isolated Docker containers for immediate cross-platform execution.
-- **CI/CD:** Implement GitHub Actions to run the structural test suites continuously.
+- **Webpack Migration:** Integrate a modern bundler (e.g., Webpack or Vite) to automatically compile the `.scss` files into minified `.css` payloads during a CI step.
+- **Lighthouse CI:** Connect GitHub Actions to run automated Google Lighthouse performance and accessibility audits on push.
 
 ## Contributing
-This repository is primarily for personal reference and educational archival. Pull Requests fixing Big-O time complexity inefficiencies are welcome.
+This repository is primarily for personal reference and academic archival.
 
 ## License
 Licensed under the MIT License.
